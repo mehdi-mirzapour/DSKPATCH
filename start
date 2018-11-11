@@ -1,0 +1,24 @@
+disp-sec.obj : disp-sec.asm
+              tasm disp-sec.asm  /zi
+video-io.obj : video-io.asm
+              tasm video-io.asm /zi
+cursor.obj:   cursor.asm
+              tasm cursor.asm /zi
+disk-io.obj:  disk-io.asm
+              tasm disk-io.asm  /zi
+kbd-io.obj:   kbd-io.asm
+              tasm kbd-io.asm /zi
+dispatch.obj : dispatch.asm
+              tasm dispatch.asm  /zi
+dskpatch.obj: dskpatch.asm
+              tasm dskpatch.asm /zi
+phantom.obj:  phantom.asm
+              tasm phantom.asm /zi
+editor.obj :  editor.asm
+              tasm editor.asm /zi
+
+
+dskpatch.exe : disk-io.obj disp-sec.obj video-io.obj cursor.obj  \
+               dskpatch.obj dispatch.obj kbd-io.obj
+              link dskpatch kbd-io dispatch disk-io disp-sec  \
+                            video-io cursor phantom  editor /map /co;

@@ -1,0 +1,51 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00132H 00133H _TEXT                  CODE
+ 00140H 001E5H 000A6H CODE_SEG               CODE
+ 001F0H 003EFH 00200H ST_SEG                 STACK
+ 003F0H 00421H 00032H _DATA                  DATA
+ 00422H 02421H 02000H _BSS                   BSS
+ 02430H 0282FH 00400H STACK                  STACK
+
+ Origin   Group
+ 003F:0   DGROUP
+
+  Address         Publics by Name
+
+ 0000:0111       CLEAR_SCREEN
+ 0000:002E       DISP_HALF_SECTOR
+ 0000:0043       DISP_LINE
+ 0000:0128       GOTO_XY
+ 0000:00AA       INIT_SEC_DISP
+ 003F:0032       SECTOR
+ 0000:0102       SEND_CRLF
+ 0014:0000       WRITE_BIN
+ 0014:0046       WRITE_CHAR
+ 0014:007F       WRITE_CHAR_N_TIMES
+ 0014:0056       WRITE_DECIMAL
+ 0014:001B       WRITE_HEX
+ 0014:0032       WRITE_HEX_DIGIT
+ 0014:0087       WRITE_PATTERN
+ 003F:0032       _edata
+ 003F:2040       _end
+
+  Address         Publics by Value
+
+ 0000:002E       DISP_HALF_SECTOR
+ 0000:0043       DISP_LINE
+ 0000:00AA       INIT_SEC_DISP
+ 0000:0102       SEND_CRLF
+ 0000:0111       CLEAR_SCREEN
+ 0000:0128       GOTO_XY
+ 0014:0000       WRITE_BIN
+ 0014:001B       WRITE_HEX
+ 0014:0032       WRITE_HEX_DIGIT
+ 0014:0046       WRITE_CHAR
+ 0014:0056       WRITE_DECIMAL
+ 0014:007F       WRITE_CHAR_N_TIMES
+ 0014:0087       WRITE_PATTERN
+ 003F:0032       SECTOR
+ 003F:0032       _edata
+ 003F:2040       _end
+
+Program entry point at 0000:0010
